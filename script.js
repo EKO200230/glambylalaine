@@ -64,29 +64,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Booking Form Handling
-const bookingForm = document.getElementById('bookingForm');
-
-bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const bookingData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        date: formData.get('date'),
-        service: formData.get('service'),
-        message: formData.get('message')
-    };
-    
-    // Show success message
-    showNotification('Booking request submitted successfully! We will contact you soon.', 'success');
-    
-    // Reset form
-    this.reset();
-});
+// Remove custom booking form submission and validation code for Formspree compatibility
 
 // Notification system with updated colors
 function showNotification(message, type = 'info') {
@@ -231,73 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
     animateElements.forEach(el => observer.observe(el));
 });
 
-// Form validation
-function validateForm() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const date = document.getElementById('date').value;
-    const service = document.getElementById('service').value;
-    
-    if (!name) {
-        showNotification('Please enter your full name.', 'error');
-        return false;
-    }
-    
-    if (!email || !isValidEmail(email)) {
-        showNotification('Please enter a valid email address.', 'error');
-        return false;
-    }
-    
-    if (!phone) {
-        showNotification('Please enter your phone number.', 'error');
-        return false;
-    }
-    
-    if (!date) {
-        showNotification('Please select a preferred date.', 'error');
-        return false;
-    }
-    
-    if (!service) {
-        showNotification('Please select a service type.', 'error');
-        return false;
-    }
-    
-    return true;
-}
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Update booking form to use validation
-bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-        return;
-    }
-    
-    // Get form data
-    const formData = new FormData(this);
-    const bookingData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        date: formData.get('date'),
-        service: formData.get('service'),
-        message: formData.get('message')
-    };
-    
-    // Show success message
-    showNotification('Booking request submitted successfully! We will contact you soon.', 'success');
-    
-    // Reset form
-    this.reset();
-});
-
 // Lazy loading for images
 function lazyLoadImages() {
     const images = document.querySelectorAll('.portfolio-item img');
@@ -322,19 +233,7 @@ function lazyLoadImages() {
 document.addEventListener('DOMContentLoaded', lazyLoadImages);
 
 // Add loading state to form submission
-bookingForm.addEventListener('submit', function(e) {
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    submitBtn.textContent = 'Submitting...';
-    submitBtn.disabled = true;
-    
-    // Simulate form processing
-    setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
+// This section is no longer needed as Formspree handles submission
 
 // Add hover effects for portfolio items
 document.addEventListener('DOMContentLoaded', function() {

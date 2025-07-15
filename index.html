@@ -71,13 +71,6 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Wedding Services</h3>
-                    <p>Complete bridal makeup and hair services. Make your special day unforgettable with our expertise.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
                         <i class="fas fa-star"></i>
                     </div>
                     <h3>Prom Night</h3>
@@ -98,9 +91,8 @@
     <section id="before-after" class="before-after">
         <div class="container">
             <h2 class="section-title">Before & After Transformations</h2>
-            <div class="before-after-columns">
-                <div class="before-column">
-                    <h3>Before</h3>
+            <div class="before-after-rows">
+                <div class="before-after-row">
                     <div class="before-after-item">
                         <img src="Clients Picture/Client 1 Graduation/Before.JPG" alt="Before Transformation">
                         <div class="before-after-overlay">
@@ -108,30 +100,31 @@
                         </div>
                     </div>
                     <div class="before-after-item">
+                        <img src="Clients Picture/Client 1 Graduation/After 1.JPG" alt="After Transformation">
+                        <div class="before-after-overlay">
+                            <p>Elegant and sophisticated graduation look</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-row">
+                    <div class="before-after-item">
                         <img src="Clients Picture/Client 2 Graduation/Before.JPG" alt="Before Transformation">
                         <div class="before-after-overlay">
                             <p>Fresh face ready for graduation glam</p>
                         </div>
                     </div>
                     <div class="before-after-item">
-                        <img src="Clients Picture/Client 3 Prom Night/Before.JPG" alt="Before Transformation">
-                        <div class="before-after-overlay">
-                            <p>Ready for prom night magic</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="after-column">
-                    <h3>After</h3>
-                    <div class="before-after-item">
-                        <img src="Clients Picture/Client 1 Graduation/After 1.JPG" alt="After Transformation">
-                        <div class="before-after-overlay">
-                            <p>Elegant and sophisticated graduation look</p>
-                        </div>
-                    </div>
-                    <div class="before-after-item">
                         <img src="Clients Picture/Client 2 Graduation/After.JPG" alt="After Transformation">
                         <div class="before-after-overlay">
                             <p>Perfect balance of natural and glamorous</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-row">
+                    <div class="before-after-item">
+                        <img src="Clients Picture/Client 3 Prom Night/Before.JPG" alt="Before Transformation">
+                        <div class="before-after-overlay">
+                            <p>Ready for prom night magic</p>
                         </div>
                     </div>
                     <div class="before-after-item">
@@ -183,7 +176,6 @@
                         <span class="portfolio-tag">After</span>
                     </div>
                 </div>
-                
                 <!-- Prom Night -->
                 <div class="portfolio-item">
                     <img src="Clients Picture/Client 3 Prom Night/After.JPG" alt="Prom Night Makeup - Dazzling Beauty">
@@ -201,34 +193,31 @@
                         <span class="portfolio-tag">After</span>
                     </div>
                 </div>
-                
-                <!-- Wedding -->
+                <!-- Special Events (including former wedding images) -->
                 <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 1.JPG" alt="Wedding Makeup - Bridal Beauty">
+                    <img src="Clients Picture/Client 7 Wedding/Person 1.JPG" alt="Special Event Makeup - Elegant Look">
                     <div class="portfolio-overlay">
-                        <h3>Bridal Beauty</h3>
-                        <p>Perfect bridal makeup for your special day</p>
-                        <span class="portfolio-tag">Bride</span>
+                        <h3>Special Event Glam</h3>
+                        <p>Elegant makeup for a memorable event</p>
+                        <span class="portfolio-tag">Special Event</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 2.JPG" alt="Wedding Makeup - Wedding Party">
+                    <img src="Clients Picture/Client 7 Wedding/Person 2.JPG" alt="Special Event Makeup - Party Look">
                     <div class="portfolio-overlay">
-                        <h3>Wedding Party Glam</h3>
-                        <p>Beautiful makeup for wedding party</p>
-                        <span class="portfolio-tag">Wedding Party</span>
+                        <h3>Party Glam</h3>
+                        <p>Beautiful makeup for a special celebration</p>
+                        <span class="portfolio-tag">Special Event</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 1 and 2.JPG" alt="Wedding Makeup - Beautiful Bridal Party">
+                    <img src="Clients Picture/Client 7 Wedding/Person 1 and 2.JPG" alt="Special Event Makeup - Group Look">
                     <div class="portfolio-overlay">
-                        <h3>Beautiful Bridal Party</h3>
-                        <p>Coordinated looks for the perfect wedding</p>
-                        <span class="portfolio-tag">Bridal Party</span>
+                        <h3>Group Glam</h3>
+                        <p>Coordinated looks for a perfect event</p>
+                        <span class="portfolio-tag">Special Event</span>
                     </div>
                 </div>
-                
-                <!-- Special Events -->
                 <div class="portfolio-item">
                     <img src="Clients Picture/Client 8 Cup and pinning/After.JPG" alt="Special Event Makeup - Cup and Pinning">
                     <div class="portfolio-overlay">
@@ -278,7 +267,7 @@
                     </div>
                 </div>
                 <div class="booking-form">
-                    <form id="bookingForm">
+                    <form id="bookingForm" action="https://formspree.io/f/mwpqkvrq" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -293,17 +282,13 @@
                         </div>
                         <div class="form-group">
                             <label for="date">Preferred Date</label>
-                            <select id="date" name="date" required>
-                                <option value="">Select a date</option>
-                                <option value="custom">Custom Date (Contact us for availability)</option>
-                            </select>
+                            <input type="date" id="date" name="date" required>
                         </div>
                         <div class="form-group">
                             <label for="service">Service Type</label>
                             <select id="service" name="service" required>
                                 <option value="">Select a service</option>
                                 <option value="graduation">Graduation Makeup</option>
-                                <option value="wedding">Wedding Services</option>
                                 <option value="prom">Prom Night</option>
                                 <option value="special">Special Event</option>
                             </select>
