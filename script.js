@@ -706,3 +706,56 @@ if (heroImg) {
         heroImg.style.transform = '';
     });
 } 
+
+// Swiper.js Portfolio Gallery Initialization
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Swiper for Portfolio
+    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        centeredSlides: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        autoplay: {
+            delay: 3200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            700: {
+                slidesPerView: 2,
+            },
+            1100: {
+                slidesPerView: 3,
+            }
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 120,
+            modifier: 1,
+            slideShadows: true,
+        },
+        speed: 900,
+    });
+
+    // Accessibility: Add tabindex to navigation
+    document.querySelectorAll('.swiper-button-next, .swiper-button-prev').forEach(btn => {
+        btn.setAttribute('tabindex', '0');
+        btn.setAttribute('aria-label', btn.classList.contains('swiper-button-next') ? 'Next slide' : 'Previous slide');
+    });
+}); 

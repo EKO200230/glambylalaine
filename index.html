@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- Navigation -->
@@ -44,7 +45,10 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Glam portrait.png" alt="GLAM by Lalaine" class="hero-img no-border">
+                <video class="hero-img" autoplay muted loop playsinline>
+                  <source src="Glam.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 <div class="sparkle-container"></div>
             </div>
         </div>
@@ -142,91 +146,120 @@
     <section id="portfolio" class="portfolio fade-in-section">
         <div class="container">
             <h2 class="section-title">Our Portfolio</h2>
-            <div class="portfolio-grid">
-                <!-- Graduation -->
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 1 Graduation/After 1.JPG" alt="Graduation Makeup - Elegant Look">
-                    <div class="portfolio-overlay">
-                        <h3>Graduation Glam</h3>
-                        <p>Elegant and sophisticated graduation look</p>
-                        <span class="portfolio-tag">After</span>
+            <!-- Swiper Slider Start -->
+            <div class="swiper portfolio-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Graduation -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 1 Graduation/After 1.JPG" alt="Graduation Makeup - Elegant Look">
+                            <div class="portfolio-overlay">
+                                <h3>Graduation Glam</h3>
+                                <p>Elegant and sophisticated graduation look</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 2 Graduation/After.JPG" alt="Graduation Makeup - Natural Elegance">
+                            <div class="portfolio-overlay">
+                                <h3>Natural Elegance</h3>
+                                <p>Perfect balance of natural and glamorous</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 4 Graduation/After.jpg" alt="Graduation Makeup - Radiant Beauty">
+                            <div class="portfolio-overlay">
+                                <h3>Radiant Beauty</h3>
+                                <p>Glowing complexion for graduation day</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 6 Graduation/IMG_5711.JPG" alt="Graduation Makeup - Natural Glamour">
+                            <div class="portfolio-overlay">
+                                <h3>Natural Glamour</h3>
+                                <p>Effortless beauty with a touch of glam</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prom Night -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 3 Prom Night/After.JPG" alt="Prom Night Makeup - Dazzling Beauty">
+                            <div class="portfolio-overlay">
+                                <h3>Prom Queen Look</h3>
+                                <p>Dazzling beauty for your magical night</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 5 Prom Night/After.PNG" alt="Prom Night Makeup - Glamorous Transformation">
+                            <div class="portfolio-overlay">
+                                <h3>Glamorous Prom</h3>
+                                <p>Stunning transformation for prom night</p>
+                                <span class="portfolio-tag">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Special Events (including former wedding images) -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 7 Wedding/Person 1.JPG" alt="Special Event Makeup - Elegant Look">
+                            <div class="portfolio-overlay">
+                                <h3>Special Event Glam</h3>
+                                <p>Elegant makeup for a memorable event</p>
+                                <span class="portfolio-tag">Special Event</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 7 Wedding/Person 2.JPG" alt="Special Event Makeup - Party Look">
+                            <div class="portfolio-overlay">
+                                <h3>Party Glam</h3>
+                                <p>Beautiful makeup for a special celebration</p>
+                                <span class="portfolio-tag">Special Event</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 7 Wedding/Person 1 and 2.JPG" alt="Special Event Makeup - Group Look">
+                            <div class="portfolio-overlay">
+                                <h3>Group Glam</h3>
+                                <p>Coordinated looks for a perfect event</p>
+                                <span class="portfolio-tag">Special Event</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-slide-glass">
+                            <img src="Clients Picture/Client 8 Cup and pinning/After.JPG" alt="Special Event Makeup - Cup and Pinning">
+                            <div class="portfolio-overlay">
+                                <h3>Cup and Pinning Ceremony</h3>
+                                <p>Professional look for nursing ceremony</p>
+                                <span class="portfolio-tag">Special Event</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 2 Graduation/After.JPG" alt="Graduation Makeup - Natural Elegance">
-                    <div class="portfolio-overlay">
-                        <h3>Natural Elegance</h3>
-                        <p>Perfect balance of natural and glamorous</p>
-                        <span class="portfolio-tag">After</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 4 Graduation/After.jpg" alt="Graduation Makeup - Radiant Beauty">
-                    <div class="portfolio-overlay">
-                        <h3>Radiant Beauty</h3>
-                        <p>Glowing complexion for graduation day</p>
-                        <span class="portfolio-tag">After</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 6 Graduation/IMG_5711.JPG" alt="Graduation Makeup - Natural Glamour">
-                    <div class="portfolio-overlay">
-                        <h3>Natural Glamour</h3>
-                        <p>Effortless beauty with a touch of glam</p>
-                        <span class="portfolio-tag">After</span>
-                    </div>
-                </div>
-                <!-- Prom Night -->
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 3 Prom Night/After.JPG" alt="Prom Night Makeup - Dazzling Beauty">
-                    <div class="portfolio-overlay">
-                        <h3>Prom Queen Look</h3>
-                        <p>Dazzling beauty for your magical night</p>
-                        <span class="portfolio-tag">After</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 5 Prom Night/After.PNG" alt="Prom Night Makeup - Glamorous Transformation">
-                    <div class="portfolio-overlay">
-                        <h3>Glamorous Prom</h3>
-                        <p>Stunning transformation for prom night</p>
-                        <span class="portfolio-tag">After</span>
-                    </div>
-                </div>
-                <!-- Special Events (including former wedding images) -->
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 1.JPG" alt="Special Event Makeup - Elegant Look">
-                    <div class="portfolio-overlay">
-                        <h3>Special Event Glam</h3>
-                        <p>Elegant makeup for a memorable event</p>
-                        <span class="portfolio-tag">Special Event</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 2.JPG" alt="Special Event Makeup - Party Look">
-                    <div class="portfolio-overlay">
-                        <h3>Party Glam</h3>
-                        <p>Beautiful makeup for a special celebration</p>
-                        <span class="portfolio-tag">Special Event</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 7 Wedding/Person 1 and 2.JPG" alt="Special Event Makeup - Group Look">
-                    <div class="portfolio-overlay">
-                        <h3>Group Glam</h3>
-                        <p>Coordinated looks for a perfect event</p>
-                        <span class="portfolio-tag">Special Event</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="Clients Picture/Client 8 Cup and pinning/After.JPG" alt="Special Event Makeup - Cup and Pinning">
-                    <div class="portfolio-overlay">
-                        <h3>Cup and Pinning Ceremony</h3>
-                        <p>Professional look for nursing ceremony</p>
-                        <span class="portfolio-tag">Special Event</span>
-                    </div>
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+            <!-- Swiper Slider End -->
         </div>
     </section>
 
@@ -402,5 +435,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html> 
