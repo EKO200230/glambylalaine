@@ -1673,6 +1673,15 @@ html {
     box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.2), 0 4px 20px 0 rgba(124,77,255,0.15);
 }
 
+/* Fallback for video loading issues */
+.hero-img[src] {
+    display: block;
+}
+
+video.hero-img {
+    background: var(--pink-light);
+}
+
 @media (max-width: 900px) {
     .hero-img {
         max-width: 80vw;
